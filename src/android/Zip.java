@@ -126,6 +126,7 @@ public class Zip extends CordovaPlugin {
                    dir.mkdirs();
                 } else {
                     File fileTempMap = resourceApi.mapUriToFile(zipUri);
+                    String fileTempDirectory = "";
                     fileTempDirectory = fileTempMap.getAbsolutePath();
                     fileTempDirectory += fileTempMap.endsWith(File.separator) ? "" : File.separator;                    
                     File fileTemp = new File(fileTempDirectory);
