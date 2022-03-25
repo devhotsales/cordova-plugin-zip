@@ -127,7 +127,11 @@ public class Zip extends CordovaPlugin {
                 } else {
                     File file = new File(outputDirectory + compressedName);
                     String canonicalPath = file.getCanonicalPath();
+                    console.log(outputDirectory + compressedName);
+                    console.log(outputDirectory);
+                    console.log(canonicalPath);
                     if (!canonicalPath.startsWith(outputDirectory)) {
+                        
                         String errorMessage = "Zip traversal security error";
                         callbackContext.error(errorMessage);
                         Log.e(LOG_TAG, errorMessage);
